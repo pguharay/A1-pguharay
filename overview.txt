@@ -1,0 +1,23 @@
++============================================================+
+|						Course CS414						 |
+|						Assignment 1						 |
+|						Student Name: Pratik Guha Ray		 |	
+|						eid: pguharay						 |
++============================================================+
+
+Abstract:
+This assignment was a refresher of some previously learned concepts and practices. The assignment
+looks little subtle on its shell, but as someone deep dives it exposes challenges at different level.
+For example: 
+1.The assignment is silent about certain use cases and behavior of the model classes. That 
+pushes us to think about all different corners and permutations that can be drawn upon the system built 
+with couple of classes.    
+2. The assignment is silent around certain collaboration scenarios e.g. how coordinate class wraps the 
+coordinate value based on the frame of reference or the world in which it exists. In other words how the 
+world exposes its dimension to the coordinate class, such questions are the intrigue part of the assignment.
+3. Writing the test first is always challenging and I've definitely enjoyed TDD exercise.
+4. Writing correct implementation for equals and hashcode is always challenging as we need to ensure 
+equivalence relation for equality.
+5. There are certain scenarios where I missed Mockito type of unit test framework to write introspection 
+tests and to verify call back. May be in next assignments we can leverage the power of mockito.      
+ 
