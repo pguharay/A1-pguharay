@@ -237,7 +237,7 @@ public class CoordinateTest
 	}
 	
 	@Test
-	public void assertCoordinatesAreNotEqual()
+	public void assertCoordinatesAreNotEqualWhenXCoordinateValuesAreNotEqual()
 	{
 		Coordinate coordinateOne = new Coordinate(world ,5, 15);
 		Coordinate coordinateTwo = new Coordinate(world ,7, 3);
@@ -246,15 +246,25 @@ public class CoordinateTest
 
 		assertFalse(coordinateOne.equals(coordinateTwo));
 		assertFalse(coordinateTwo.equals(coordinateOne));
+	}
+	
+	@Test
+	public void assertCoordinatesAreNotEqualWhenYCoordinateValuesAreNotEqual()
+	{
+		Coordinate coordinateOne = new Coordinate(world ,5, 15);
 		
 		Coordinate coordinateFour = new Coordinate(world ,5, 7);
 		assertFalse(coordinateOne.equals(coordinateFour));
-		
+	}
+	
+	@Test
+	public void assertCoordinatesAreNotEqualWhenThoseBelongToDifferentWorlds()
+	{
+		Coordinate coordinateOne = new Coordinate(world ,5, 15);
 		World anotherWorld = new World(10, 12);
-		Coordinate coordinateThree = new Coordinate(anotherWorld ,27, 27);
-		assertFalse(coordinateTwo.equals(coordinateThree));
+		Coordinate coordinateThree = new Coordinate(anotherWorld ,5, 15);
+
 		assertFalse(coordinateOne.equals(coordinateThree));
-		
 		assertFalse(coordinateOne.equals(new Object()));
 		
 		//ensure child class is not equals to parent class
