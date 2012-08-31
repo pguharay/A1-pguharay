@@ -59,7 +59,7 @@
 						<phase>install</phase>
 						<configuration>
 							<target>
-								<zip destfile="target/A1-pguharay.zip" basedir="target"
+								<zip destfile="target/A1-pguharay.zip" basedir="." includes="overview.txt"
 									excludes="classes/**, test-classes/**, surefire-reports/**,maven-archiver/**, *-1.0.jar, antrun/**, *-sources.jar, META-INF/**">
 									<zipfileset src="target/A1-pguharay-sources.jar">
 										<exclude name="META-INF/**"/>
