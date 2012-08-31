@@ -1,9 +1,9 @@
-+============================================================+
-|						Course CS414						 |
-|						Assignment 1						 |
-|						Student Name: Pratik Guha Ray		 |	
-|						eid: pguharay						 |
-+============================================================+
++================================================================+
+|			Course CS414				 |
+|			Assignment 1				 |
+|			Student Name: Pratik Guha Ray		 |	
+|			eid: pguharay				 |
++================================================================+
 
 Abstract:
 This assignment was a refresher of some previously learned concepts and practices. The assignment
