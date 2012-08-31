@@ -9,21 +9,35 @@ Abstract:
 This assignment was a refresher of some previously learned concepts and practices. The assignment
 looks little subtle on its shell, but as someone deep dives it exposes challenges at different level.
 For example: 
-1.The assignment is silent about certain use cases and behavior of the model classes. That 
+1. TDD itself a difficult engineering discipline to practice and this assignment exactly guides through 
+the process and level of thinking one should have while executing TDD. There are certain class 
+collaboration issues are not very evident from the problem description, but while writing the tests 
+I had to stretch my thinking to bridge the gap. 
+2.The assignment is silent about certain use cases and behavior of the model classes. That 
 pushes us to think about all different corners and permutations that can be drawn upon the system built 
 with couple of classes.    
-2. The assignment is silent around certain collaboration scenarios e.g. how coordinate class wraps the 
+3. The assignment is silent around certain collaboration scenarios e.g. how coordinate class wraps the 
 coordinate value based on the frame of reference or the world in which it exists. In other words how the 
 world exposes its dimension to the coordinate class, such questions are the intrigue part of the assignment.
-3. Writing the test first is always challenging and I've definitely enjoyed TDD exercise.
-4. Writing correct implementation for equals and hash code is always challenging as we need to ensure 
+4. Writing the test first is always challenging and I've definitely enjoyed TDD exercise.
+5. Writing correct implementation for equals and hash code is always challenging as we need to ensure 
 equivalence relation for equality.
-5. There are certain scenarios where I wanted to use Mockito type of unit test framework to write introspection 
+6. There are certain scenarios where I wanted to use Mockito type of unit test framework to write introspection 
 tests and to verify call back. However, I've override World and Coordinate classes in some test scenarioes
 to mimic the mock behavior.
 
 Tools and Library used:
 ============================
 java version: 1.6
-junit version: 4.8.2     
+junit version: 4.8.2  
+
+Project structure:
+===========================
+./
+   cs414/a1/pguharay/World.java
+   cs414/a1/pguharay/WorldTest.java
+   cs414/a1/pguharay/Coordinate.java
+   cs414/a1/pguharay/CoordinateTest.java
+   cs414/a1/pguharay/TestAll.java
+overview.txt      
  

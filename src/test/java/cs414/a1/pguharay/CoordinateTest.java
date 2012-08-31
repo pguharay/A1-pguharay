@@ -23,16 +23,29 @@ public class CoordinateTest
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
-	public void constructCorodinateWithNullWorldInstance()
+	public void constructCoordinateWithNullWorldInstance()
 	{
 		new Coordinate(null , 14, 16);
 	}
 	
 	@Test
-	public void constructCorodinateWithNotNullWorldInstance()
+	public void constructCoordinateWithNotNullWorldInstance()
 	{
 		Coordinate coordinate = new Coordinate(world , 14, 16);
 		assertNotNull(coordinate);
+	}
+	
+	@Test
+	public void assertPutOnCertainCoordinateReplacesExistingObjectFromWorld()
+	{
+		Coordinate coordinate = new Coordinate(world , 14, 16);
+		world.put(4,4,"existing object");
+		
+		assertEquals("existing object", coordinate.get());
+		world.put(coordinate, "new object");
+		
+		assertFalse("existing object".equals(coordinate.get()));
+		assertEquals("new object", coordinate.get());
 	}
 	
 	@Test
