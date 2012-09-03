@@ -229,6 +229,21 @@ public class WorldTest
 		World myWorld = new World(10);
 		World notMyWorld = new World(20);
 		
+		myWorld.put(4, 5, "hello");
+		
+		int xCoordinate = 4;
+		int yCoordinate = 5;
+		Coordinate coordinateFromNotMyWorld = new Coordinate(notMyWorld, xCoordinate, yCoordinate);
+		
+		assertEquals("hello", myWorld.get(coordinateFromNotMyWorld));
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void putObjectInWorldUsingCoordinatesFromAnotherWorld()
+	{
+		World myWorld = new World(10);
+		World notMyWorld = new World(20);
+		
 		int xCoordinate = 4;
 		int yCoordinate = 5;
 		Coordinate coordinateFromNotMyWorld = new Coordinate(notMyWorld, xCoordinate, yCoordinate);
